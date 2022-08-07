@@ -1,0 +1,30 @@
+.entryContainer {
+  display: grid;
+  grid-template-columns: 0.6fr 0.1fr 2fr 0.3fr 5fr 1fr;
+  background-color: var(--surface-section);
+  grid-template-rows: 6vh;
+  border: 1px solid;
+  border-color: var(--surface-border);
+  border-radius: var(--border-radius);
+}
+.titleContainer {
+  text-align: center;
+}
+
+#address {
+  font-size: 1.5vh;
+  color: var(--text-color-secondary); 
+}
+
+.addressContainer {
+  margin-left: 1vw;
+}
+
+.imageContainer {
+  margin-top: 0.7vh;
+  margin-left: 0.8vh;
+}
+
+.p-divider {
+  margin: 0;
+}

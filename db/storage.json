@@ -1,0 +1,488 @@
+{
+    "0xf1039d7eed57e4cfb3fa744f468dd70d7ec0e5e9": {
+        "lastSeen": 0,
+        "isActive": false,
+        "record": false,
+        "suspended": false,
+        "sourceSegments": 0,
+        "transcodedSegments": 0,
+        "sourceSegmentsDuration": 0,
+        "transcodedSegmentsDuration": 0,
+        "sourceBytes": 0,
+        "transcodedBytes": 0,
+        "profiles": [
+            {
+                "name": "240p0",
+                "fps": 0,
+                "bitrate": 250000,
+                "width": 426,
+                "height": 240
+            },
+            {
+                "name": "360p0",
+                "fps": 0,
+                "bitrate": 800000,
+                "width": 640,
+                "height": 360
+            },
+            {
+                "name": "480p0",
+                "fps": 0,
+                "bitrate": 1600000,
+                "width": 854,
+                "height": 480
+            },
+            {
+                "name": "720p0",
+                "fps": 0,
+                "bitrate": 3000000,
+                "width": 1280,
+                "height": 720
+            }
+        ],
+        "name": "victor test edition2",
+        "kind": "stream",
+        "userId": "56cf25eb-c526-4e4e-b9e0-a3b7c8d73a48",
+        "renditions": {},
+        "id": "69ddfe77-e5aa-497a-b330-ede701a9f844",
+        "createdAt": 1659865573163,
+        "streamKey": "69dd-nxza-z2j7-0rz2",
+        "playbackId": "69ddct7k31qbppca",
+        "createdByTokenName": "dev-api-key",
+        "multistream": {
+            "targets": []
+        }
+    },
+    "0xb56d53a6b23d5c4200ddc57475c49fb67c20dc60": {
+        "lastSeen": 0,
+        "isActive": false,
+        "record": false,
+        "suspended": false,
+        "sourceSegments": 0,
+        "transcodedSegments": 0,
+        "sourceSegmentsDuration": 0,
+        "transcodedSegmentsDuration": 0,
+        "sourceBytes": 0,
+        "transcodedBytes": 0,
+        "profiles": [
+            {
+                "name": "240p0",
+                "fps": 0,
+                "bitrate": 250000,
+                "width": 426,
+                "height": 240
+            },
+            {
+                "name": "360p0",
+                "fps": 0,
+                "bitrate": 800000,
+                "width": 640,
+                "height": 360
+            },
+            {
+                "name": "480p0",
+                "fps": 0,
+                "bitrate": 1600000,
+                "width": 854,
+                "height": 480
+            },
+            {
+                "name": "720p0",
+                "fps": 0,
+                "bitrate": 3000000,
+                "width": 1280,
+                "height": 720
+            }
+        ],
+        "name": "testLitAgain",
+        "kind": "stream",
+        "userId": "56cf25eb-c526-4e4e-b9e0-a3b7c8d73a48",
+        "renditions": {},
+        "id": "4d5a2a18-9ddd-408d-b5a1-8d8053e0a393",
+        "createdAt": 1659866271818,
+        "streamKey": "4d5a-od8w-e6u9-85vo",
+        "playbackId": "4d5ahoxwyq3u02ra",
+        "createdByTokenName": "dev-api-key",
+        "multistream": {
+            "targets": []
+        }
+    },
+    "0xf741eab8b34fbfd86e989aebfc867c0ec22a6f6a": {
+        "lastSeen": 0,
+        "isActive": false,
+        "record": false,
+        "suspended": false,
+        "sourceSegments": 0,
+        "transcodedSegments": 0,
+        "sourceSegmentsDuration": 0,
+        "transcodedSegmentsDuration": 0,
+        "sourceBytes": 0,
+        "transcodedBytes": 0,
+        "profiles": [
+            {
+                "name": "240p0",
+                "fps": 0,
+                "bitrate": 250000,
+                "width": 426,
+                "height": 240
+            },
+            {
+                "name": "360p0",
+                "fps": 0,
+                "bitrate": 800000,
+                "width": 640,
+                "height": 360
+            },
+            {
+                "name": "480p0",
+                "fps": 0,
+                "bitrate": 1600000,
+                "width": 854,
+                "height": 480
+            },
+            {
+                "name": "720p0",
+                "fps": 0,
+                "bitrate": 3000000,
+                "width": 1280,
+                "height": 720
+            }
+        ],
+        "name": "testRinkebyChannelOne",
+        "kind": "stream",
+        "userId": "56cf25eb-c526-4e4e-b9e0-a3b7c8d73a48",
+        "renditions": {},
+        "id": "3165b8a9-eb06-4dd9-9d61-4aa49dc19532",
+        "createdAt": 1659866843123,
+        "streamKey": "3165-g1ki-smha-smhi",
+        "playbackId": "3165t5u7ma1ekelm",
+        "createdByTokenName": "dev-api-key",
+        "multistream": {
+            "targets": []
+        }
+    },
+    "0xf28064672b63e5b0094bb780985af164ea65e1ff": {
+        "lastSeen": 0,
+        "isActive": false,
+        "record": false,
+        "suspended": false,
+        "sourceSegments": 0,
+        "transcodedSegments": 0,
+        "sourceSegmentsDuration": 0,
+        "transcodedSegmentsDuration": 0,
+        "sourceBytes": 0,
+        "transcodedBytes": 0,
+        "profiles": [
+            {
+                "name": "240p0",
+                "fps": 0,
+                "bitrate": 250000,
+                "width": 426,
+                "height": 240
+            },
+            {
+                "name": "360p0",
+                "fps": 0,
+                "bitrate": 800000,
+                "width": 640,
+                "height": 360
+            },
+            {
+                "name": "480p0",
+                "fps": 0,
+                "bitrate": 1600000,
+                "width": 854,
+                "height": 480
+            },
+            {
+                "name": "720p0",
+                "fps": 0,
+                "bitrate": 3000000,
+                "width": 1280,
+                "height": 720
+            }
+        ],
+        "name": "nvbcnvbncvbn",
+        "kind": "stream",
+        "userId": "56cf25eb-c526-4e4e-b9e0-a3b7c8d73a48",
+        "renditions": {},
+        "id": "4a5ab495-92f8-4b5b-98fd-e12a49de71b4",
+        "createdAt": 1659866850919,
+        "streamKey": "4a5a-fo1q-5god-5dhm",
+        "playbackId": "4a5a0x6g4t3bobpc",
+        "createdByTokenName": "dev-api-key",
+        "multistream": {
+            "targets": []
+        }
+    },
+    "0x6bb6432aee6a679611fd44be4bcb866981c9db39": {
+        "lastSeen": 0,
+        "isActive": false,
+        "record": false,
+        "suspended": false,
+        "sourceSegments": 0,
+        "transcodedSegments": 0,
+        "sourceSegmentsDuration": 0,
+        "transcodedSegmentsDuration": 0,
+        "sourceBytes": 0,
+        "transcodedBytes": 0,
+        "profiles": [
+            {
+                "name": "240p0",
+                "fps": 0,
+                "bitrate": 250000,
+                "width": 426,
+                "height": 240
+            },
+            {
+                "name": "360p0",
+                "fps": 0,
+                "bitrate": 800000,
+                "width": 640,
+                "height": 360
+            },
+            {
+                "name": "480p0",
+                "fps": 0,
+                "bitrate": 1600000,
+                "width": 854,
+                "height": 480
+            },
+            {
+                "name": "720p0",
+                "fps": 0,
+                "bitrate": 3000000,
+                "width": 1280,
+                "height": 720
+            }
+        ],
+        "name": "Gamer's Paradise",
+        "kind": "stream",
+        "userId": "56cf25eb-c526-4e4e-b9e0-a3b7c8d73a48",
+        "renditions": {},
+        "id": "d0b7d3e5-0f70-4666-9edf-182c42b0e12d",
+        "createdAt": 1659872650627,
+        "streamKey": "d0b7-s2a4-9v9y-ybao",
+        "playbackId": "d0b7csxin3iy8xio",
+        "createdByTokenName": "dev-api-key",
+        "multistream": {
+            "targets": []
+        }
+    },
+    "0x0e0250d719d3fcb8d5d864a8268cf2860a376a40": {
+        "lastSeen": 0,
+        "isActive": false,
+        "record": false,
+        "suspended": false,
+        "sourceSegments": 0,
+        "transcodedSegments": 0,
+        "sourceSegmentsDuration": 0,
+        "transcodedSegmentsDuration": 0,
+        "sourceBytes": 0,
+        "transcodedBytes": 0,
+        "profiles": [
+            {
+                "name": "240p0",
+                "fps": 0,
+                "bitrate": 250000,
+                "width": 426,
+                "height": 240
+            },
+            {
+                "name": "360p0",
+                "fps": 0,
+                "bitrate": 800000,
+                "width": 640,
+                "height": 360
+            },
+            {
+                "name": "480p0",
+                "fps": 0,
+                "bitrate": 1600000,
+                "width": 854,
+                "height": 480
+            },
+            {
+                "name": "720p0",
+                "fps": 0,
+                "bitrate": 3000000,
+                "width": 1280,
+                "height": 720
+            }
+        ],
+        "name": "Me just Coding All Day",
+        "kind": "stream",
+        "userId": "56cf25eb-c526-4e4e-b9e0-a3b7c8d73a48",
+        "renditions": {},
+        "id": "0cdbf58d-9501-4b48-966c-759afb4fb71a",
+        "createdAt": 1659872702369,
+        "streamKey": "0cdb-3fv5-n9dh-n8mq",
+        "playbackId": "0cdbs2qhvggar9qn",
+        "createdByTokenName": "dev-api-key",
+        "multistream": {
+            "targets": []
+        }
+    },
+    "0x3cddb6299ee6d1c940c99822f3739cf0edb26cd8": {
+        "lastSeen": 0,
+        "isActive": false,
+        "record": false,
+        "suspended": false,
+        "sourceSegments": 0,
+        "transcodedSegments": 0,
+        "sourceSegmentsDuration": 0,
+        "transcodedSegmentsDuration": 0,
+        "sourceBytes": 0,
+        "transcodedBytes": 0,
+        "profiles": [
+            {
+                "name": "240p0",
+                "fps": 0,
+                "bitrate": 250000,
+                "width": 426,
+                "height": 240
+            },
+            {
+                "name": "360p0",
+                "fps": 0,
+                "bitrate": 800000,
+                "width": 640,
+                "height": 360
+            },
+            {
+                "name": "480p0",
+                "fps": 0,
+                "bitrate": 1600000,
+                "width": 854,
+                "height": 480
+            },
+            {
+                "name": "720p0",
+                "fps": 0,
+                "bitrate": 3000000,
+                "width": 1280,
+                "height": 720
+            }
+        ],
+        "name": "Hackathon Speed Run",
+        "kind": "stream",
+        "userId": "56cf25eb-c526-4e4e-b9e0-a3b7c8d73a48",
+        "renditions": {},
+        "id": "78731121-199a-4a79-a912-b52cefec5b13",
+        "createdAt": 1659874819471,
+        "streamKey": "7873-lgwn-s4mx-7yht",
+        "playbackId": "7873egtuoj09394s",
+        "createdByTokenName": "dev-api-key",
+        "multistream": {
+            "targets": []
+        }
+    },
+    "0xb5a986364dad207591ea9446c6e3a5b9923061a3": {
+        "lastSeen": 0,
+        "isActive": false,
+        "record": false,
+        "suspended": false,
+        "sourceSegments": 0,
+        "transcodedSegments": 0,
+        "sourceSegmentsDuration": 0,
+        "transcodedSegmentsDuration": 0,
+        "sourceBytes": 0,
+        "transcodedBytes": 0,
+        "profiles": [
+            {
+                "name": "240p0",
+                "fps": 0,
+                "bitrate": 250000,
+                "width": 426,
+                "height": 240
+            },
+            {
+                "name": "360p0",
+                "fps": 0,
+                "bitrate": 800000,
+                "width": 640,
+                "height": 360
+            },
+            {
+                "name": "480p0",
+                "fps": 0,
+                "bitrate": 1600000,
+                "width": 854,
+                "height": 480
+            },
+            {
+                "name": "720p0",
+                "fps": 0,
+                "bitrate": 3000000,
+                "width": 1280,
+                "height": 720
+            }
+        ],
+        "name": "My Final Moment",
+        "kind": "stream",
+        "userId": "56cf25eb-c526-4e4e-b9e0-a3b7c8d73a48",
+        "renditions": {},
+        "id": "91d7fe1c-c7f7-416a-9469-b9da71f95756",
+        "createdAt": 1659875034703,
+        "streamKey": "91d7-62jg-wgck-fc6g",
+        "playbackId": "91d7hqixjxw415bu",
+        "createdByTokenName": "dev-api-key",
+        "multistream": {
+            "targets": []
+        }
+    },
+    "0x4f6dc801eabc53038b0f93936f6cfa5f9536dbcd": {
+        "lastSeen": 0,
+        "isActive": false,
+        "record": false,
+        "suspended": false,
+        "sourceSegments": 0,
+        "transcodedSegments": 0,
+        "sourceSegmentsDuration": 0,
+        "transcodedSegmentsDuration": 0,
+        "sourceBytes": 0,
+        "transcodedBytes": 0,
+        "profiles": [
+            {
+                "name": "240p0",
+                "fps": 0,
+                "bitrate": 250000,
+                "width": 426,
+                "height": 240
+            },
+            {
+                "name": "360p0",
+                "fps": 0,
+                "bitrate": 800000,
+                "width": 640,
+                "height": 360
+            },
+            {
+                "name": "480p0",
+                "fps": 0,
+                "bitrate": 1600000,
+                "width": 854,
+                "height": 480
+            },
+            {
+                "name": "720p0",
+                "fps": 0,
+                "bitrate": 3000000,
+                "width": 1280,
+                "height": 720
+            }
+        ],
+        "name": "qwerr",
+        "kind": "stream",
+        "userId": "56cf25eb-c526-4e4e-b9e0-a3b7c8d73a48",
+        "renditions": {},
+        "id": "828f19f1-7313-4813-bb82-424f6202dd00",
+        "createdAt": 1659880932292,
+        "streamKey": "828f-er62-jztu-d96l",
+        "playbackId": "828fywaugtn2vggl",
+        "createdByTokenName": "dev-api-key",
+        "multistream": {
+            "targets": []
+        }
+    }
+}

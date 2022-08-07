@@ -1,0 +1,48 @@
+body {
+  background-color: var(--surface-ground);
+  color: var(--text-secondary-color);
+  font-family: var(--font-family);
+}
+
+.i-entry-input {
+  width: 100%;
+}
+
+#create-button {
+  width: 80%;
+}
+
+.upload-elem {
+  display: none !important;
+}
+
+.cancel-elem {
+  display: none !important;
+}
+
+#stream-button {
+  margin-top: 3vh;
+}
+
+#stream-container {
+  display: flex;
+  gap: 2vh;
+  flex-direction: column;
+}
+
+.stream-entry {
+  display: flex;
+  justify-content: space-between;
+}
+
+#header {
+  color: var(--text-color-secondary);
+}
+
+#exp {
+  color: var(--text-color);
+}
+
+// .upload-elem {
+//   display: none !important;
+// }

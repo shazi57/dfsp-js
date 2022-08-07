@@ -1,0 +1,12 @@
+#stream-container {
+  display: flex;
+  flex-direction: column;
+}
+#left-panel {
+  display: flex;
+  gap: 2vh;
+  flex-direction: column;
+}
+#header {
+  color: var(--text-color-secondary);
+}
