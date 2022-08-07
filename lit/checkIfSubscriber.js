@@ -23,6 +23,7 @@ export default async function checkIfSubscriber(channelAddress) {
       });
     }
     Cookies.set('lit-auth', jwt, { expires: 1 });
+    return jwt;
   } catch (err) {
     Cookies.remove('lit-auth');
     console.log(err);

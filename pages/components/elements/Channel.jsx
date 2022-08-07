@@ -9,12 +9,15 @@ import checkIfSubscriber from '../../../lit/checkIfSubscriber';
 export default function Channel(props) {
   const router = useRouter();
   const {
-    address, imageURI, name,
+    address, imageURI, name, tokenId,
   } = props;
 
   const onNavigateClicked = async () => {
-    await checkIfAdmin(address);
-    router.push(`/channels/${address}`);
+    const jwt = await checkIfAdmin(address);
+    if (!jwt) {
+      await checkIfSubscriber(address);
+    }
+    router.push(`/channels/${address}?tokenId=${tokenId}`);
   };
   return (
     <div className={styles.entryContainer}>

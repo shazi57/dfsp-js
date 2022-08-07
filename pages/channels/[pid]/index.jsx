@@ -2,6 +2,7 @@ import Cookies from 'cookies';
 import LitJsSdk from 'lit-js-sdk';
 // import { Button } from 'primereact/button';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { createClient } from 'urql';
 import axios from 'axios';
 import abi from 'pages/artifacts/ERC721Drop.json';
@@ -18,6 +19,9 @@ import { ethers } from 'ethers';
 
 export default function Dashboard(props) {
   const router = useRouter();
+  console.log(router);
+  const [purchased, setPurchased] = useState(false);
+  const [ticketId, setTicketId] = useState();
   const provider = useProvider();
   const { signer, signerAddr } = useSigner(provider);
   const {
@@ -63,7 +67,15 @@ export default function Dashboard(props) {
     const proxyConnected = implementationContract.attach(proxyAddr);
     const signerConnected = proxyConnected.connect(signer);
     const purchaseTX = await signerConnected.purchase(1, { value: ethers.BigNumber.from(publicSalePrice) });
-    await purchaseTX.wait();
+    try {
+      const txReceipt = await purchaseTX.wait();
+      setPurchased(true);
+      const event = txReceipt.events.find(({ event }) => (event === 'CreatedDrop'));
+      setTicketId(event.args[3]);
+    } catch (err) {
+      console.log(err);
+      setPurchased(false);
+    }
   };
 
   return (
@@ -88,12 +100,14 @@ export default function Dashboard(props) {
         <div id="right-grid">
           <RightPanel
             role={role}
+            purchased={purchased}
             streamData={streamData}
             publicSalePrice={publicSalePrice}
             publicSaleStart={publicSaleStart}
             publicSaleEnd={publicSaleEnd}
             onGoLiveStreamButtonClicked={onGoLiveStreamButtonClicked}
             onPurchaseClicked={onPurchaseClicked}
+            ticketId={ticketId}
           />
         </div>
       </div>
@@ -157,7 +171,7 @@ export async function getServerSideProps({
         maxSalePurchasePerAddress,
         publicSaleStart,
         publicSaleEnd
-      },
+      }
     }
   }
   `;

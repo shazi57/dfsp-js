@@ -11,6 +11,8 @@ export default function RightPanel(props) {
     publicSalePrice,
     publicSaleStart,
     publicSaleEnd,
+    purchased,
+    ticketId,
   } = props;
   console.log(role);
   const {
@@ -37,7 +39,20 @@ export default function RightPanel(props) {
           <Button id="stream-button" onClick={onGoLiveStreamButtonClicked} label="Go Live!" />
         </div>
       );
-    } if (role === 'guest') {
+    }
+    if (role === 'subscriber' || purchased) {
+      return (
+        <div id="stream-container">
+          <div id="header">Stream</div>
+          <div className="stream-entry" id="stream-id">
+            <div id="stream-id-header">Ticket Id</div>
+            <div id="stream-id-text">{ticketId}</div>
+          </div>
+          <Button id="stream-button" onClick={onGoLiveStreamButtonClicked} label="Watch Live!" />
+        </div>
+      );
+    }
+    if (role === 'guest') {
       return (
         <div id="stream-container">
           <div id="header">Buy NFT Pass to subscribe!</div>

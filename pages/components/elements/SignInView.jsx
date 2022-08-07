@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function SignInView(props) {
   const {
-    signerAddr, onConnectButtonClicked, onNavigateClicked, inputAddress, onInputChanged,
+    signerAddr, onConnectButtonClicked, onNavigateClicked, inputAddress, onInputChanged, onSubscribedChannelsClicked
   } = props;
 
   return (
@@ -32,7 +32,7 @@ export default function SignInView(props) {
           && (
             <div id="options-container">
               <div id="options-header">
-                <div id="option-title">
+                <div className="option-title">
                   <h4>
                     Start Streaming
                   </h4>
@@ -72,11 +72,20 @@ export default function SignInView(props) {
                 <b>OR</b>
               </Divider>
               <div
-                id="option-title"
+                className="option-title"
+                id="bottom-option-title"
               >
-                <h4>
-                  Start Watching
-                </h4>
+                <div id="subscriber-container">
+                  <div id="start-watching">
+                    Start Watching
+                  </div>
+                  <div id="channels-button-container">
+                    <Button
+                      label="MyChannels"
+                      onClick={onSubscribedChannelsClicked}
+                    />
+                  </div>
+                </div>
                 <div className="p-inputgroup">
                   <InputText placeholder="Enter Channel Address" value={inputAddress} onChange={onInputChanged} />
                   <Button onClick={onNavigateClicked} label="Go!" />
@@ -87,8 +96,15 @@ export default function SignInView(props) {
       }
       <style jsx>
         {`
+        #subscriber-container {
+          justify-content: space-between;
+          display: flex;
+        }
         .p-inputgroup {
           width: 24vw;
+        }
+        #start-watching {
+          margin-top: 3vh;
         }
         #button-row {
           display: flex;
@@ -102,11 +118,23 @@ export default function SignInView(props) {
         #options-header {
           display: flex;
         }
-        #option-title {
+        #bottom-option-title {
+          width: 24vw;
+          margin-top: 4vh;
+        }
+        .option-title {
           width: 11vw;
+          font-weight: bold;
+          display: flex;
+          gap : 5vh;
+          flex-direction: column;
         }
         b {
           color: var(--text-color-secondary);
+        }
+        #start-watching {
+          font-size: 3vh;
+          line-height: 0;
         }
         h4 {
           margin-top: 7.5vh;

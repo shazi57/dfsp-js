@@ -484,5 +484,59 @@
         "multistream": {
             "targets": []
         }
+    },
+    "0x34e78ed65a483d513a2ba51bdd90c16bee85a87e": {
+        "lastSeen": 0,
+        "isActive": false,
+        "record": false,
+        "suspended": false,
+        "sourceSegments": 0,
+        "transcodedSegments": 0,
+        "sourceSegmentsDuration": 0,
+        "transcodedSegmentsDuration": 0,
+        "sourceBytes": 0,
+        "transcodedBytes": 0,
+        "profiles": [
+            {
+                "name": "240p0",
+                "fps": 0,
+                "bitrate": 250000,
+                "width": 426,
+                "height": 240
+            },
+            {
+                "name": "360p0",
+                "fps": 0,
+                "bitrate": 800000,
+                "width": 640,
+                "height": 360
+            },
+            {
+                "name": "480p0",
+                "fps": 0,
+                "bitrate": 1600000,
+                "width": 854,
+                "height": 480
+            },
+            {
+                "name": "720p0",
+                "fps": 0,
+                "bitrate": 3000000,
+                "width": 1280,
+                "height": 720
+            }
+        ],
+        "name": "My Final Edition",
+        "kind": "stream",
+        "userId": "56cf25eb-c526-4e4e-b9e0-a3b7c8d73a48",
+        "renditions": {},
+        "id": "dfb286dd-0fe9-4146-885e-b27e7a7b1e7b",
+        "createdAt": 1659885895382,
+        "streamKey": "dfb2-evw3-l3wf-68pi",
+        "playbackId": "dfb2imgzo0uc1h7b",
+        "createdByTokenName": "dev-api-key",
+        "multistream": {
+            "targets": []
+        }
     }
 }

@@ -28,10 +28,16 @@ function Home() {
   };
 
   const onNavigateClicked = async () => {
-    await checkIfAdmin(inputAddress);
-    await checkIfSubscriber(inputAddress);
-    router.push(`/channels/${inputAddress}`);
+    const jwt = await checkIfAdmin(inputAddress);
+    if (!jwt) {
+      await checkIfSubscriber(inputAddress);
+    }
+    router.push(`/channels/${inputAddress}?signer=${signerAddr}`);
   };
+
+  const onSubscribedChannelsClicked = async () => {
+    router.push(`/subscribed/${signerAddr}`);
+  }
 
   return (
     <div id="app">
@@ -49,6 +55,7 @@ function Home() {
         onNavigateClicked={onNavigateClicked}
         inputAddress={inputAddress}
         onInputChanged={onInputChanged}
+        onSubscribedChannelsClicked={onSubscribedChannelsClicked}
       />
       <Divider id="divider" layout="vertical" />
       <SponsorList />
