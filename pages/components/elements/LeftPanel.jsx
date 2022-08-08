@@ -5,7 +5,6 @@ export default function LeftPanel(props) {
   const {
     name,
     symbol,
-    address,
     owner,
     description,
     maxSupply,

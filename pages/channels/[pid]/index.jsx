@@ -2,7 +2,8 @@ import Cookies from 'cookies';
 import LitJsSdk from 'lit-js-sdk';
 // import { Button } from 'primereact/button';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { ethers } from 'ethers';
+import { useState } from 'react';
 import { createClient } from 'urql';
 import axios from 'axios';
 import abi from 'pages/artifacts/ERC721Drop.json';
@@ -15,32 +16,27 @@ import useSigner from 'hooks/useSigner';
 import HeroImage from 'pages/components/elements/HeroImage';
 import LeftPanel from 'pages/components/elements/LeftPanel';
 import RightPanel from '../../components/elements/RightPanel';
-import { ethers } from 'ethers';
 
 export default function Dashboard(props) {
   const router = useRouter();
-  console.log(router);
   const [purchased, setPurchased] = useState(false);
   const [ticketId, setTicketId] = useState();
   const provider = useProvider();
-  const { signer, signerAddr } = useSigner(provider);
+  const { signer } = useSigner(provider);
   const {
     role, streamData, data: {
       erc721Drop: {
         name,
         symbol,
-        network,
         address,
         owner,
         maxSupply,
-        totalMinted,
         editionMetadata: {
           description,
           imageURI,
         },
         salesConfig: {
           publicSalePrice,
-          maxSalePurchasePerAddress,
           publicSaleStart,
           publicSaleEnd,
         },
@@ -54,7 +50,6 @@ export default function Dashboard(props) {
   //   router.push(`/channels/${channelAddress}/stream`);
   // };
   const onGoLiveStreamButtonClicked = async () => {
-    console.log(router);
     const channelAddress = router.query.pid;
     // const streamId = streamData.streamKey;
     const { playbackId } = streamData;
@@ -73,7 +68,6 @@ export default function Dashboard(props) {
       const event = txReceipt.events.find(({ event }) => (event === 'CreatedDrop'));
       setTicketId(event.args[3]);
     } catch (err) {
-      console.log(err);
       setPurchased(false);
     }
   };
@@ -150,7 +144,7 @@ export async function getServerSideProps({
     },
   });
 
-  //fetch prop data from subgraph
+  // fetch prop data from subgraph
   const APIURL = 'https://api.thegraph.com/subgraphs/name/iainnash/erc721droprinkeby';
   const tokensQuery = `
   query {
@@ -197,13 +191,13 @@ export async function getServerSideProps({
   if (!jwt) {
     role = 'guest';
   } else {
-    const { verified, payload } = LitJsSdk.verifyJwt({ jwt });
+    const { payload } = LitJsSdk.verifyJwt({ jwt });
     role = payload.role;
-    console.log(payload);
+    // console.log(payload);
     if (payload.baseUrl !== process.env.NEXT_PUBLIC_BASE_URL || (payload.path !== `channels/${params.pid}` && payload.path !== `/channels/${params.pid}`)) {
-      console.log(payload.baseUrl !== process.env.NEXT_PUBLIC_BASE_URL);
-      console.log(params.pid);
-      console.log(payload.path !== `/channels/${params.pid}`);
+      // console.log(payload.baseUrl !== process.env.NEXT_PUBLIC_BASE_URL);
+      // console.log(params.pid);
+      // console.log(payload.path !== `/channels/${params.pid}`);
       return {
         redirect: {
           permanent: false,
@@ -216,7 +210,7 @@ export async function getServerSideProps({
   return {
     props: {
       role,
-      streamData,
+      streamData: streamData || null,
       data,
     },
   };

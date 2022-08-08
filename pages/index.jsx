@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Divider } from 'primereact/divider';
+import { useRouter } from 'next/router';
 import { ethers } from 'ethers';
 import connectToLit from '../lit/index';
-import Router, { useRouter } from 'next/router';
 
 import useSigner from '../hooks/useSigner';
 import checkIfAdmin from '../lit/checkIfAdmin';
@@ -14,7 +14,7 @@ function Home() {
   const router = useRouter();
   const [provider, setProvider] = useState(null);
   const [inputAddress, setInputAddress] = useState('');
-  const { signer, signerAddr } = useSigner(provider);
+  const { signerAddr } = useSigner(provider);
 
   const onConnectButtonClicked = async () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -37,7 +37,7 @@ function Home() {
 
   const onSubscribedChannelsClicked = async () => {
     router.push(`/subscribed/${signerAddr}`);
-  }
+  };
 
   return (
     <div id="app">

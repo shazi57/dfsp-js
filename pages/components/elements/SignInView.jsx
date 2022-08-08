@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function SignInView(props) {
   const {
-    signerAddr, onConnectButtonClicked, onNavigateClicked, inputAddress, onInputChanged, onSubscribedChannelsClicked
+    signerAddr, onConnectButtonClicked, onNavigateClicked, inputAddress, onInputChanged, onSubscribedChannelsClicked,
   } = props;
 
   return (
@@ -139,7 +139,7 @@ export default function SignInView(props) {
         h4 {
           margin-top: 7.5vh;
           color: var(--text-color-primary);
-          font-size: 3vh;
+          font-size: 2.7vh;
           line-height: 0;
         }
         #wallet-button-container {

@@ -27,5 +27,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'jsx-a11y/media-has-caption': 'off',
     'no-multi-assign': 'off',
+    'react/destructuring-assignment': 'off',
+    'no-unused-expressions': 'off',
   },
 };

@@ -14,17 +14,13 @@ export default function RightPanel(props) {
     purchased,
     ticketId,
   } = props;
-  console.log(role);
-  const {
-    streamKey,
-    playbackId,
-    lastSeen,
-  } = streamData;
-  console.log(props);
 
   const renderTopPanel = () => {
-    console.log(timestamp.toDate(Number(publicSaleStart)));
     if (role === 'admin') {
+      const {
+        streamKey,
+        playbackId,
+      } = streamData;
       return (
         <div id="stream-container">
           <div id="header">Stream</div>
@@ -70,12 +66,13 @@ export default function RightPanel(props) {
           </div>
           <div className="stream-entry" id="playback-id">
             <div id="stream-playback-header">Sale Ends</div>
-            <div id="stream-playback-text">{timestamp.toDate(Number(publicSaleEnd)).toLocaleDateString() === "Invalid Date" ? 'Forever' : timestamp.toDate(Number(publicSaleEnd)).toLocaleDateString()}</div>
+            <div id="stream-playback-text">{timestamp.toDate(Number(publicSaleEnd)).toLocaleDateString() === 'Invalid Date' ? 'Forever' : timestamp.toDate(Number(publicSaleEnd)).toLocaleDateString()}</div>
           </div>
           <Button id="stream-button" onClick={onPurchaseClicked} label="Purhcase" />
         </div>
       );
     }
+    return null;
   };
 
   return (
