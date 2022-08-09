@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.145.0",
+    "@aws-sdk/lib-dynamodb": "^3.145.0",
     "@zoralabs/nft-components": "^1.1.2",
     "@zoralabs/nft-drop-contracts": "^1.0.1",
     "axios": "^0.27.2",

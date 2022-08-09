@@ -1,5 +1,4 @@
 export default function getConditions({ role, channelAddress }) {
-  console.log(process.env.NEXT_PUBLIC_BASE_URL);
   if (role === 'admin') {
     return {
       evmContractConditions: [{

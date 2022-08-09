@@ -1,4 +1,6 @@
 import Cookies from 'cookies';
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { DynamoDBDocumentClient, GetCommand, PutCommand } from '@aws-sdk/lib-dynamodb';
 import LitJsSdk from 'lit-js-sdk';
 // import { Button } from 'primereact/button';
 import { useRouter } from 'next/router';
@@ -136,7 +138,23 @@ export default function Dashboard(props) {
 export async function getServerSideProps({
   req, res, params,
 }) {
-  // const db = new JSONdb('db/storage.json');
+  const dynamoClient = new DynamoDBClient({
+    credentials: {
+      accessKeyId: process.env.ACCESS_KEY,
+      secretAccessKey: process.env.SECRET_KEY,
+    },
+    region: process.env.REGION,
+  });
+  const getCommandInput = {
+    TableName: 'dfsp-table',
+    Key: {
+      id: params.pid,
+    },
+  };
+  const getItemCommand = new GetCommand(getCommandInput);
+
+  const ddbDocClient = DynamoDBDocumentClient.from(dynamoClient);
+
   const livePeerAPI = axios.create({
     baseURL: 'https://livepeer.studio',
     headers: {
@@ -175,20 +193,32 @@ export async function getServerSideProps({
   });
 
   const { data } = await client.query(tokensQuery).toPromise();
-  // let streamData = db.get(params.pid);
-  // if (!streamData) {
-  //   const response = await livePeerAPI.post('/api/stream', {
-  //     name: data.erc721Drop.name,
-  //   });
 
-  //   streamData = response.data;
-  //   db.set(params.pid, streamData);
-  // }
-  const response = await livePeerAPI.post('/api/stream', {
-    name: data.erc721Drop.name,
-  });
+  const { Item } = await ddbDocClient.send(getItemCommand);
+  // console.log('hello world');
+  let streamData;
+  if (!Item) {
+    const response = await livePeerAPI.post('/api/stream', {
+      name: data.erc721Drop.name,
+    });
+    const putCommandInput = {
+      TableName: 'dfsp-table',
+      Item: {
+        id: params.pid,
+        streamData: response.data,
+      },
+    };
+    const putCommand = new PutCommand(putCommandInput);
+    await ddbDocClient.send(putCommand);
+    streamData = response.data;
+  } else {
+    streamData = Item.streamData;
+  }
+  // const response = await livePeerAPI.post('/api/stream', {
+  //   name: data.erc721Drop.name,
+  // });
 
-  const streamData = response.data;
+  // const streamData = response.data;
   const cookies = new Cookies(req, res);
   const jwt = cookies.get('lit-auth');
 
