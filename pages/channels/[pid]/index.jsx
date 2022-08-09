@@ -136,7 +136,7 @@ export default function Dashboard(props) {
 export async function getServerSideProps({
   req, res, params,
 }) {
-  const db = new JSONdb('db/storage.json');
+  // const db = new JSONdb('db/storage.json');
   const livePeerAPI = axios.create({
     baseURL: 'https://livepeer.studio',
     headers: {
