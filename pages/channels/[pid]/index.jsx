@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { createClient } from 'urql';
 import axios from 'axios';
 import abi from 'pages/artifacts/ERC721Drop.json';
-import JSONdb from 'simple-json-db';
+// import JSONdb from 'simple-json-db';
 
 import useProvider from 'hooks/useProvider';
 // import checkIfAdmin from 'lit/checkIfAdmin';
