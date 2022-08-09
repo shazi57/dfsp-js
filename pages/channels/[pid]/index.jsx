@@ -175,15 +175,20 @@ export async function getServerSideProps({
   });
 
   const { data } = await client.query(tokensQuery).toPromise();
-  let streamData = db.get(params.pid);
-  if (!streamData) {
-    const response = await livePeerAPI.post('/api/stream', {
-      name: data.erc721Drop.name,
-    });
+  // let streamData = db.get(params.pid);
+  // if (!streamData) {
+  //   const response = await livePeerAPI.post('/api/stream', {
+  //     name: data.erc721Drop.name,
+  //   });
 
-    streamData = response.data;
-    db.set(params.pid, streamData);
-  }
+  //   streamData = response.data;
+  //   db.set(params.pid, streamData);
+  // }
+  const response = await livePeerAPI.post('/api/stream', {
+    name: data.erc721Drop.name,
+  });
+
+  const streamData = response.data;
   const cookies = new Cookies(req, res);
   const jwt = cookies.get('lit-auth');
 
